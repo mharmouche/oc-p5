@@ -23,7 +23,7 @@ for (k of cart.kanap){
 	total += k.price * k.quantity;
  
 	document.getElementById('cart__items').innerHTML+= `
-              <article class="cart__item" data-id="${k.id}" data-color="${k.id}">
+              <article class="cart__item" data-id="${k.id}" data-color="${k.color}">
                 <div class="cart__item__img">
                   <img src="${k.imageUrl}" alt="${k.altTxt}">
                 </div>
