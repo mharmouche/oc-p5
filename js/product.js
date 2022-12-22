@@ -22,27 +22,38 @@ boutton = document.getElementById("addToCart");
 boutton.addEventListener("click", addToCart);
 
 function addToCart(){
-	//get data from dom or request response
 	let id = response._id;
 	let name = response.name;
 	let color = document.getElementById('colors').value;
 	let quantity = document.getElementById('quantity').value;
 	let price = response.price;
+	
+	let imageUrl = response.imageUrl;
+	let altTxt = response.altTxt;
 
 	if (color == ''){
 		alert("Verifier le choix des couleurs SVP!");
 	}else if (quantity == '' || quantity <1 || quantity >100) {
 		alert("Verifier les quantités SVP!");
-	}else {//for testing
-		console.log('id = ', id);
-		console.log('name = ', name );
-		console.log('color = ', color);
-		console.log('quantity = ', quantity);
-		console.log('prix additionnel = ', quantity*price );
+	}else {
+		let item = {};
+		item.id = id;
+		item.name = name;
+		item.color = color;
+		item.quantity = quantity;
+		item.price = price;
+		item.imageUrl = imageUrl;
+		item.altTxt = altTxt;
+
+		let cart = JSON.parse(localStorage.cart);
+		cart.kanap.push(item);
+		localStorage.setItem('cart', JSON.stringify(cart));
+
+		alert("Ajouter à votre panier!");
 	}	
 }
 
-// End of addToCart V0
+// End of addToCart V1 , use localStorage
 
 id = window.location.href.split('id=')[1];
 url =  baseURL + "/api/products/"+id;
