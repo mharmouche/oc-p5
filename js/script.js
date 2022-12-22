@@ -1,8 +1,22 @@
-import {baseURL, init0 } from ('./init.js');
+// to be organised in externl js and called.
+//host of API
+baseURL = "https://azure-brainy-echidna.glitch.me";
 
+// initialisation : init localStorage
+function init0(){
+  let cart0 = '{"orderId":"","total":0,"kanap":[]}';
+  if (localStorage.cart == null){
 
-let baseURL = initModule.baseURL;
-init0();
+      localStorage.setItem( 'cart', cart0);
+
+  };
+  let cart = JSON.parse(localStorage.cart);
+  if (cart.kanap.length ==0){
+    localStorage.setItem( 'cart', cart0);
+  }
+}
+// End of file
+
 
 // get all data
 let url =  baseURL + "/api/products";
