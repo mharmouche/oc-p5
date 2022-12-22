@@ -17,6 +17,33 @@ function init0(){
 }
 // End of file
 
+// add event for button
+boutton = document.getElementById("addToCart");
+boutton.addEventListener("click", addToCart);
+
+function addToCart(){
+	//get data from dom or request response
+	let id = response._id;
+	let name = response.name;
+	let color = document.getElementById('colors').value;
+	let quantity = document.getElementById('quantity').value;
+	let price = response.price;
+
+	if (color == ''){
+		alert("Verifier le choix des couleurs SVP!");
+	}else if (quantity == '' || quantity <1 || quantity >100) {
+		alert("Verifier les quantités SVP!");
+	}else {//for testing
+		console.log('id = ', id);
+		console.log('name = ', name );
+		console.log('color = ', color);
+		console.log('quantity = ', quantity);
+		console.log('prix additionnel = ', quantity*price );
+	}	
+}
+
+// End of addToCart V0
+
 id = window.location.href.split('id=')[1];
 url =  baseURL + "/api/products/"+id;
 
