@@ -1,4 +1,8 @@
-let baseURL = "https://azure-brainy-echidna.glitch.me";
+const initModule = require('./init.js');
+
+let baseURL = initModule.baseURL;
+initModule.init0();
+
 // get all data
 let url =  baseURL + "/api/products";
 var response;
