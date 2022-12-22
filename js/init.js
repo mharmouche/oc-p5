@@ -1,8 +1,8 @@
 //host of API
-export baseURL = "https://azure-brainy-echidna.glitch.me";
+baseURL = "https://azure-brainy-echidna.glitch.me";
 
 // initialisation : init localStorage
-export function init0(){
+function init0(){
   let cart0 = '{"orderId":"","total":0,"kanap":[]}';
   if (localStorage.cart == null){
 
