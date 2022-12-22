@@ -1,7 +1,8 @@
-const initModule = require('./init.js');
+import {baseURL, init0 } from ('./init.js');
+
 
 let baseURL = initModule.baseURL;
-initModule.init0();
+init0();
 
 // get all data
 let url =  baseURL + "/api/products";
