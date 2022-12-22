@@ -1,4 +1,22 @@
+// to be organised in externl js and called.
+//host of API
 baseURL = "https://azure-brainy-echidna.glitch.me";
+
+// initialisation : init localStorage
+function init0(){
+  let cart0 = '{"orderId":"","total":0,"kanap":[]}';
+  if (localStorage.cart == null){
+
+      localStorage.setItem( 'cart', cart0);
+
+  };
+  let cart = JSON.parse(localStorage.cart);
+  if (cart.kanap.length ==0){
+    localStorage.setItem( 'cart', cart0);
+  }
+}
+// End of file
+
 id = window.location.href.split('id=')[1];
 url =  baseURL + "/api/products/"+id;
 
