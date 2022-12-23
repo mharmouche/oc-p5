@@ -27,11 +27,19 @@ function initSupprimer(){
 			//deleteItem.parentNode.parentNode.parentNode.parentNode.parentNode.setAttribute('style', 'background-color: cyan;');
 			
 			const nodeMap = deleteItem.parentNode.parentNode.parentNode.parentNode.attributes;
-			let text = "";
-			for (let i = 0; i < nodeMap.length; i++) {
-			  text += nodeMap[i].name + " = " + nodeMap[i].value + "<br>";
+			//let text = "";
+			//for (let i = 0; i < nodeMap.length; i++) {
+			//  text += nodeMap[i].name + " = " + nodeMap[i].value + "<br>";
 			}
-			console.log(text);
+			//console.log(text);
+			let id = nodeMap[1].value;
+			let color = nodeMap[2].value;
+		
+			// remove element from localstorage,  delete it visually, estimate total
+			let cart = JSON.parse(localStorage.cart);
+			cart.kanap = cart.kanap.filter(k => (k.id !== id) || (k.color !== color));
+			localStorage.setItem('cart', JSON.stringify(cart));
+			
 			deleteItem.parentNode.parentNode.parentNode.parentNode.remove() ;
 		});
 	});
