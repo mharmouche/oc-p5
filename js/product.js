@@ -46,7 +46,15 @@ function addToCart(){
 		item.altTxt = altTxt;
 
 		let cart = JSON.parse(localStorage.cart);
-		cart.kanap.push(item);
+		
+		//pour eviter la duplication
+		let index = cart.kanap.findIndex(k => (k.id === item.id) && (k.color === k.color));
+		if (index === -1){//new
+			cart.kanap.push(item);
+		}else{//exists
+			cart.kanap[index].quantity += item.quantity;
+		}
+		
 		localStorage.setItem('cart', JSON.stringify(cart));
 
 		alert("Ajouter à votre panier!");
