@@ -17,6 +17,7 @@ function init0(){
 }
 // End of file
 
+init0();
 
 // get all data
 let url =  baseURL + "/api/products";
