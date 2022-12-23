@@ -19,12 +19,13 @@ function initSupprimer(){
 	deleteItems.forEach(deleteItem => {
 		deleteItem.addEventListener('click', function handleClick(event) {
 			console.log('box clicked', event);
-			deleteItem.setAttribute('style', 'background-color: yellow;');
-			deleteItem.parentNode.setAttribute('style', 'background-color: orange;');
-			deleteItem.parentNode.parentNode.setAttribute('style', 'background-color: green;');
-			deleteItem.parentNode.parentNode.parentNode.setAttribute('style', 'background-color: blue;');
-			deleteItem.parentNode.parentNode.parentNode.parentNode.setAttribute('style', 'background-color: red;');
-			deleteItem.parentNode.parentNode.parentNode.parentNode.parentNode.setAttribute('style', 'background-color: cyan;');
+			//deleteItem.setAttribute('style', 'background-color: yellow;');
+			//deleteItem.parentNode.setAttribute('style', 'background-color: orange;');
+			//deleteItem.parentNode.parentNode.setAttribute('style', 'background-color: green;');
+			//deleteItem.parentNode.parentNode.parentNode.setAttribute('style', 'background-color: blue;');
+			//deleteItem.parentNode.parentNode.parentNode.parentNode.setAttribute('style', 'background-color: red;');
+			//deleteItem.parentNode.parentNode.parentNode.parentNode.parentNode.setAttribute('style', 'background-color: cyan;');
+			deleteItem.parentNode.parentNode.parentNode.parentNode.parentNode.remove() ;
 		});
 	});
 }
