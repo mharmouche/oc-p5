@@ -26,8 +26,8 @@ function initSupprimer(){
 			//deleteItem.parentNode.parentNode.parentNode.parentNode.setAttribute('style', 'background-color: red;');
 			//deleteItem.parentNode.parentNode.parentNode.parentNode.parentNode.setAttribute('style', 'background-color: cyan;');
 			let pere = deleteItem.parentNode.parentNode.parentNode.parentNode;
-			console.log("suppression pere " + pere);
-			console.log("id " + pere.data-id);
+			//console.log("suppression pere " + pere);
+			//console.log("id " + pere.data-id);
 			pere.remove() ;
 		});
 	});
