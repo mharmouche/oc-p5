@@ -30,7 +30,7 @@ function initSupprimer(){
 			//let text = "";
 			//for (let i = 0; i < nodeMap.length; i++) {
 			//  text += nodeMap[i].name + " = " + nodeMap[i].value + "<br>";
-			}
+			//}
 			//console.log(text);
 			let id = nodeMap[1].value;
 			let color = nodeMap[2].value;
