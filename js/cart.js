@@ -39,13 +39,22 @@ function initSupprimer(){
 			let cart = JSON.parse(localStorage.cart);
 			cart.kanap = cart.kanap.filter(k => (k.id !== id) || (k.color !== color));
 			localStorage.setItem('cart', JSON.stringify(cart));
+			refreshTotal();
 			
 			deleteItem.parentNode.parentNode.parentNode.parentNode.remove() ;
 		});
 	});
 }
 //initSupprimer() V0 for test event
-
+function refreshTotal(){
+	total = 0;
+	cart = JSON.parse(localStorage.cart);
+	for (k of cart.kanap){
+		total += k.price * k.quantity;
+	}
+	localStorage.setItem('cart', JSON.stringify(cart));
+	document.getElementById('totalPrice').innerHTML = total;
+};
 cart = JSON.parse(localStorage.cart);
 
 total = 0;
