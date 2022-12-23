@@ -25,10 +25,14 @@ function initSupprimer(){
 			//deleteItem.parentNode.parentNode.parentNode.setAttribute('style', 'background-color: blue;');
 			//deleteItem.parentNode.parentNode.parentNode.parentNode.setAttribute('style', 'background-color: red;');
 			//deleteItem.parentNode.parentNode.parentNode.parentNode.parentNode.setAttribute('style', 'background-color: cyan;');
-			let pere = deleteItem.parentNode.parentNode.parentNode.parentNode;
-			//console.log("suppression pere " + pere);
-			//console.log("id " + pere.data-id);
-			pere.remove() ;
+			
+			const nodeMap = deleteItem.parentNode.parentNode.parentNode.parentNode.attributes;
+			let text = "";
+			for (let i = 0; i < nodeMap.length; i++) {
+			  text += nodeMap[i].name + " = " + nodeMap[i].value + "<br>";
+			}
+			console.log(text);
+			deleteItem.parentNode.parentNode.parentNode.parentNode.remove() ;
 		});
 	});
 }
