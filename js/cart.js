@@ -35,11 +35,12 @@ cart = JSON.parse(localStorage.cart);
 
 total = 0;
 document.getElementById('cart__items').innerHTML = '';
+//use data-id as counter/pointer for id in cart.kanap
+let dataId = 0;
+
 for (k of cart.kanap){
 
 	total += k.price * k.quantity;
- 	//use data-id as counter/pointer for id in cart.kanap
-	let dataId = -1;
 	document.getElementById('cart__items').innerHTML+= `
               <article class="cart__item" data-id="${dataId++}" data-color="${k.color}">
                 <div class="cart__item__img">
