@@ -17,6 +17,8 @@ function init0(){
 }
 // End of file
 
+init0();
+
 // add event for button
 boutton = document.getElementById("addToCart");
 boutton.addEventListener("click", addToCart);
