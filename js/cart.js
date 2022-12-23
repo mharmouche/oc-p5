@@ -25,7 +25,7 @@ function initSupprimer(){
 			//deleteItem.parentNode.parentNode.parentNode.setAttribute('style', 'background-color: blue;');
 			//deleteItem.parentNode.parentNode.parentNode.parentNode.setAttribute('style', 'background-color: red;');
 			//deleteItem.parentNode.parentNode.parentNode.parentNode.parentNode.setAttribute('style', 'background-color: cyan;');
-			deleteItem.parentNode.parentNode.parentNode.parentNode.parentNode.remove() ;
+			deleteItem.parentNode.parentNode.parentNode.parentNode.remove() ;
 		});
 	});
 }
