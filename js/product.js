@@ -50,7 +50,7 @@ function addToCart(){
 		let cart = JSON.parse(localStorage.cart);
 		
 		//pour eviter la duplication
-		let index = cart.kanap.findIndex(k => (k.id === item.id) && (k.color === k.color));
+		let index = cart.kanap.findIndex(k => (k.id === item.id) && (k.color === item.color));
 		if (index === -1){//new
 			cart.kanap.push(item);
 		}else{//exists
