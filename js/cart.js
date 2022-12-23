@@ -13,6 +13,17 @@ function init0(){
 }
 // End of file
 
+//initSupprimer() to be executer after html DOM construction
+function initSupprimer(){
+	const deleteItems = document.querySelectorAll('.deleteItem');
+	deleteItems.forEach(box => {
+		deleteItem.addEventListener('click', function handleClick(event) {
+			console.log('box clicked', event);
+			deleteItem.setAttribute('style', 'background-color: yellow;');
+		});
+	});
+}
+//initSupprimer() V0 for test event
 
 cart = JSON.parse(localStorage.cart);
 
@@ -52,3 +63,7 @@ for (k of cart.kanap){
 
 }
 document.getElementById('totalPrice').innerHTML = total;
+
+
+
+initSupprimer();
