@@ -30,13 +30,13 @@ for (k of cart.kanap){
                 <div class="cart__item__content">
                   <div class="cart__item__content__description">
                     <h2>${k.name}</h2>
-                    <p>${k.quantity}</p>
+                    <p>${k.color}</p>
                     <p>${k.price} €</p>
                   </div>
                   <div class="cart__item__content__settings">
                     <div class="cart__item__content__settings__quantity">
                       <p>Qté : </p>
-                      <input type="number" class="itemQuantity" name="itemQuantity" min="1" max="100" value="42">
+                      <input type="number" class="itemQuantity" name="itemQuantity" min="1" max="100" value=${k.quantity}>
                     </div>
                     <div class="cart__item__content__settings__delete">
                       <p class="deleteItem">Supprimer</p>
