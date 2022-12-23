@@ -54,7 +54,7 @@ function addToCart(){
 		if (index === -1){//new
 			cart.kanap.push(item);
 		}else{//exists
-			cart.kanap[index].quantity += item.quantity;
+			cart.kanap[index].quantity = String (parseInt(cart.kanap[index].quantity) + parseInt(item.quantity));
 		}
 		
 		localStorage.setItem('cart', JSON.stringify(cart));
