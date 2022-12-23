@@ -16,7 +16,7 @@ function init0(){
 //initSupprimer() to be executer after html DOM construction
 function initSupprimer(){
 	const deleteItems = document.querySelectorAll('.deleteItem');
-	deleteItems.forEach(box => {
+	deleteItems.forEach(deleteItem => {
 		deleteItem.addEventListener('click', function handleClick(event) {
 			console.log('box clicked', event);
 			deleteItem.setAttribute('style', 'background-color: yellow;');
