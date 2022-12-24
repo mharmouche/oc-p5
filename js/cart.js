@@ -74,6 +74,7 @@ function testOrder(){
 	let strBody =  JSON.stringify(content);
 	
 	// post data
+	/*
 	response= {};
 	fetch(url, {
 	    method: "POST",
@@ -91,6 +92,26 @@ function testOrder(){
 		response = value;
 		console.log(response);
 	});
+	*/
+	// test2
+	fetch("https://mockbin.com/request", {
+	    method: "POST",
+	    headers: {
+	      'Accept': 'application/json', 
+	      'Content-Type': 'application/json'
+	    },
+	    body: JSON.stringify({value: 123})
+	})
+	  .then(function(res) {
+	    if (res.ok) {
+	      return res.json();
+	    }
+	  })
+	  .then(function(value) {
+		console.log(value.postData.text);
+	  });
+	
+	
 	
 };
 //end testOrder
