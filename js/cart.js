@@ -76,6 +76,8 @@ function manipQuantity(){
 		    	// make sure that is not float nor NaN
 		    	let newQuantity = parseInt(event.target.value);
 		    	newQuantity = isNaN(newQuantity)?0:newQuantity;//quantity is int
+		    	newQuantity = (newQuantity<1)?1:newQuantity;//quantity not less than 1
+		    
 			event.target.value = newQuantity;
 		    	cart.kanap[index].quantity = String(newQuantity);
 		    
