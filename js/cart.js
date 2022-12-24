@@ -90,7 +90,7 @@ function testOrder(){
 	.then(function(value) {
 		response = value;
 		console.log(response);
-	};
+	});
 	
 };
 //end testOrder
