@@ -135,6 +135,7 @@ function testOrder(){
 	  });
 	  */
 	//test4 : strbody
+	/*
 	url = "https://mockbin.com/request";
 	content = {value: 123};
 	strBody =  JSON.stringify(content);
@@ -153,6 +154,28 @@ function testOrder(){
 	  })
 	  .then(function(value) {
 		console.log("test3 \n" + value.postData.text);
+	  });
+	  */
+	
+	//test5 : contend simul cart
+	url = "https://mockbin.com/request";
+	//content = {value: 123};
+	strBody =  JSON.stringify(content);
+	fetch(url, {
+	    method: "POST",
+	    headers: {
+	      'Accept': 'application/json', 
+	      'Content-Type': 'application/json'
+	    },
+	    body: strBody
+	})
+	  .then(function(res) {
+	    if (res.ok) {
+	      return res.json();
+	    }
+	  })
+	  .then(function(value) {
+		console.log("test5 \n" + value.postData.text);
 	  });
 
 	
