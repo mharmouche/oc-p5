@@ -74,7 +74,7 @@ function manipQuantity(){
 			let cart = JSON.parse(localStorage.cart);
 			let index = cart.kanap.indexOf(k => (k.id === id) || (k.color === color));
 		    	let newQuantity = event.target.value;
-		    	cart.kanap[index].quantity = newQuantity;
+		    	cart.kanap[index].quantity = String(newQuantity);
 		    
 		    
 			localStorage.setItem('cart', JSON.stringify(cart));
