@@ -62,7 +62,23 @@ function manipQuantity(){
 
 	itemQuantitys.forEach(itemQuantity => {
 	    itemQuantity.addEventListener('change', (event) => {
-		alert(`You like ${event.target.value}`);
+			//alert(`You like ${event.target.value}`);
+			
+			
+			const nodeMap = itemQuantity.parentNode.parentNode.parentNode.parentNode.attributes;
+			
+			let id = nodeMap[1].value;
+			let color = nodeMap[2].value;
+		
+			// adjust localStorage, estimate total
+			let cart = JSON.parse(localStorage.cart);
+			let index = cart.kanap.indexOf(k => (k.id === id) || (k.color === color));
+		    	let newQuantity = event.target.value;
+		    	cart.kanap[index].quantity = newQuantity;
+		    
+		    
+			localStorage.setItem('cart', JSON.stringify(cart));
+			refreshTotal();
 	    }); 
 	});
 }
