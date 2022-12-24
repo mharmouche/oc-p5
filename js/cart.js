@@ -70,7 +70,7 @@ function testOrder(){
 	content.contact.address = "37 rue le Fontaine";
 	content.contact.city = "le Havre";
 	content.contact.email = "mohamed@fayezbok.lb";
-	content.contact.products = ["107fb5b75607497b96722bda5b504926"];
+	content.products = ["107fb5b75607497b96722bda5b504926"];
 	let strBody =  JSON.stringify(content);
 		
 	//test8 : send request to kanap api
