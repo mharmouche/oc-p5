@@ -158,6 +158,7 @@ function testOrder(){
 	  */
 	
 	//test5 : contend simul cart
+	/*
 	url = "https://mockbin.com/request";
 	//content = {value: 123};
 	strBody =  JSON.stringify(content);
@@ -177,10 +178,10 @@ function testOrder(){
 	  .then(function(value) {
 		console.log("test5 \n" + value.postData.text);
 	  });
-
+	*/
 	
 	//test6 : send request to kanapapi
-	url = "https://azure-brainy-echidna.glitch.me/api/products/order/";
+	url = "https://azure-brainy-echidna.glitch.me/api/products/order";
 	//content = {value: 123};
 	strBody =  JSON.stringify(content);
 	fetch(url, {
