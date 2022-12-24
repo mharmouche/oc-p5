@@ -56,6 +56,15 @@ function refreshTotal(){
 	document.getElementById('totalPrice').innerHTML = total;
 };
 
+// manipulation quantity
+const itemQuantitys = document.querySelectorAll('.itemQuantity');
+
+itemQuantitys.forEach(itemQuantity => {
+    itemQuantity.addEventListener('change', (event) => {
+        alert(`You like ${event.target.value}`);
+    }); 
+});
+//End manipumation 
 // test API post
 boutton = document.getElementById("order");
 boutton.addEventListener("click", testOrder);
