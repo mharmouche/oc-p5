@@ -137,7 +137,7 @@ function testOrder(){
 	//test4 : strbody
 	url = "https://mockbin.com/request";
 	content = {value: 123};
-	let strBody =  JSON.stringify(content);
+	strBody =  JSON.stringify(content);
 	fetch(url, {
 	    method: "POST",
 	    headers: {
