@@ -65,7 +65,7 @@ function testOrder(){
 	let url = "https://azure-brainy-echidna.glitch.me/api/products/order/";
 
 	let content = {};content.contact = {};
-	content.contact.firstname = "Mohamed";
+	content.contact.firstName = "Mohamed";
 	content.contact.lastName = "Harmouche";
 	content.contact.address = "37 rue le Fontaine";
 	content.contact.city = "le Havre";
@@ -73,7 +73,7 @@ function testOrder(){
 	content.contact.products = ["107fb5b75607497b96722bda5b504926"];
 	let strBody =  JSON.stringify(content);
 		
-	//test7 : send request to kanap api
+	//test8 : send request to kanap api
 	fetch(url, {
 	    method: "POST",
 	    headers: {
