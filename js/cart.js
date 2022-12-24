@@ -72,7 +72,7 @@ function manipQuantity(){
 		
 			// adjust localStorage, estimate total
 			let cart = JSON.parse(localStorage.cart);
-			let index = cart.kanap.indexOf(k => (k.id === id) || (k.color === color));
+			let index = cart.kanap.findIndex(k => (k.id === id) && (k.color === color));
 		    	let newQuantity = event.target.value;
 		    	cart.kanap[index].quantity = String(newQuantity);
 		    
