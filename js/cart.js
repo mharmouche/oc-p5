@@ -90,6 +90,9 @@ function testOrder(){
 	  .then(function(value) {
 		let orderId = value.orderId;
 		console.log("orderId : " + orderId);
+		let cart = JSON.parse(localStorage.cart);
+		cart.orderId = orderId;
+		localStorage.setItem( 'cart', cart);
 		window.location.href = `./confirmation.html?orderId=${orderId}`;
 	  });
 
