@@ -75,7 +75,7 @@ function manipQuantity(){
 			let index = cart.kanap.findIndex(k => (k.id === id) && (k.color === color));
 		    	// make sure that is not float nor NaN
 		    	let newQuantity = parseInt(event.target.value);
-		    	newQuantity = isNaN(newQuantity)?0;//quantity is int
+		    	newQuantity = isNaN(newQuantity)?0:newQuantity;//quantity is int
 			event.target.value = newQuantity;
 		    	cart.kanap[index].quantity = String(newQuantity);
 		    
