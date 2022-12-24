@@ -88,7 +88,8 @@ function testOrder(){
 	    }
 	  })
 	  .then(function(value) {
-		console.log("test7 \n" + value);
+		let orderId = value.orderId;
+		console.log("orderId : " + orderId);
 	  });
 
 	
