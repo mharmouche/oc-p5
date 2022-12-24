@@ -94,6 +94,7 @@ function testOrder(){
 	});
 	*/
 	// test2
+	/*
 	fetch("https://mockbin.com/request", {
 	    method: "POST",
 	    headers: {
@@ -109,6 +110,27 @@ function testOrder(){
 	  })
 	  .then(function(value) {
 		console.log(value.postData.text);
+	  });
+	*/
+	//test3 : use variable in request
+	url = "https://mockbin.com/request";
+	content = {value: 123};
+	let strBody =  JSON.stringify(content);
+	fetch(url, {
+	    method: "POST",
+	    headers: {
+	      'Accept': 'application/json', 
+	      'Content-Type': 'application/json'
+	    },
+	    body: JSON.stringify(content)
+	})
+	  .then(function(res) {
+	    if (res.ok) {
+	      return res.json();
+	    }
+	  })
+	  .then(function(value) {
+		console.log("test3 \n" + value.postData.text);
 	  });
 	
 	
