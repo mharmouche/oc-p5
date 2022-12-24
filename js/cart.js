@@ -179,6 +179,28 @@ function testOrder(){
 	  });
 
 	
+	//test6 : send request to kanapapi
+	url = "https://azure-brainy-echidna.glitch.me/api/products/order/";
+	//content = {value: 123};
+	strBody =  JSON.stringify(content);
+	fetch(url, {
+	    method: "POST",
+	    headers: {
+	      'Accept': 'application/json', 
+	      'Content-Type': 'application/json'
+	    },
+	    body: strBody
+	})
+	  .then(function(res) {
+	    if (res.ok) {
+	      return res.json();
+	    }
+	  })
+	  .then(function(value) {
+		console.log("test6 \n" + value.postData.text);
+	  });
+
+	
 	
 	
 };
