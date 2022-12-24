@@ -57,13 +57,15 @@ function refreshTotal(){
 };
 
 // manipulation quantity
-const itemQuantitys = document.querySelectorAll('.itemQuantity');
+function manipQuantity(){
+	const itemQuantitys = document.querySelectorAll('.itemQuantity');
 
-itemQuantitys.forEach(itemQuantity => {
-    itemQuantity.addEventListener('change', (event) => {
-        alert(`You like ${event.target.value}`);
-    }); 
-});
+	itemQuantitys.forEach(itemQuantity => {
+	    itemQuantity.addEventListener('change', (event) => {
+		alert(`You like ${event.target.value}`);
+	    }); 
+	});
+}
 //End manipumation 
 // test API post
 boutton = document.getElementById("order");
@@ -152,3 +154,4 @@ document.getElementById('totalPrice').innerHTML = total;
 
 
 initSupprimer();
+manipQuantity();
