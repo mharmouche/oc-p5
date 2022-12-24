@@ -98,21 +98,24 @@ function testOrder(){
 
 	let content = {};content.contact = {};
 	//test data
-	/*
+	
 	content.contact.firstName = "Mohamed";
 	content.contact.lastName = "Harmouche";
 	content.contact.address = "37 rue le Fontaine";
 	content.contact.city = "le Havre";
 	content.contact.email = "mohamed@fayezbok.lb";
+	/*
 	content.products = ["107fb5b75607497b96722bda5b504926"];
 	*/
 	
 	//Get right data from form and localStorage
+	/*
 	content.contact.firstName = document.getElementById("firstName").value;
 	content.contact.lastName = document.getElementById("lastName").value;
 	content.contact.address = document.getElementById("address").value;
 	content.contact.city = document.getElementById("city").value;
 	content.contact.email = document.getElementById("email").value;
+	*/
 	content.products = JSON.parse(localStorage.cart).kanap;	
 	
 	
