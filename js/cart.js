@@ -45,7 +45,7 @@ function initSupprimer(){
 		});
 	});
 }
-//initSupprimer() V0 for test event
+//initSupprimer()  for test event
 function refreshTotal(){
 	total = 0;
 	cart = JSON.parse(localStorage.cart);
@@ -55,6 +55,30 @@ function refreshTotal(){
 	localStorage.setItem('cart', JSON.stringify(cart));
 	document.getElementById('totalPrice').innerHTML = total;
 };
+
+// test API post
+boutton = document.getElementById("order");
+boutton.addEventListener("click", testOrder);
+
+function testOrder(){
+	//url + json body
+	let url = "https://azure-brainy-echidna.glitch.me/api/products/order/";
+
+	let content = {};content.contact = {};
+	content.contact.firstname = "Mohamed";
+	content.contact.lastName = "Harmouche";
+	content.contact.address = "37 rue le Fontaine";
+	content.contact.city = "le Havre";
+	content.contact.email = "mohamed@fayezbok.lb";
+	content.contact.products = ["107fb5b75607497b96722bda5b504926"];
+	body =  JSON.stringify(content);
+	
+	console.log(url);
+	console.log(content);
+	console.log(body);
+	
+};
+//end testOrder
 cart = JSON.parse(localStorage.cart);
 
 total = 0;
