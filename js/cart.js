@@ -71,11 +71,26 @@ function testOrder(){
 	content.contact.city = "le Havre";
 	content.contact.email = "mohamed@fayezbok.lb";
 	content.contact.products = ["107fb5b75607497b96722bda5b504926"];
-	body =  JSON.stringify(content);
+	let strBody =  JSON.stringify(content);
 	
-	console.log(url);
-	console.log(content);
-	console.log(body);
+	// post data
+	response= {};
+	fetch(url, {
+	    method: "POST",
+	    headers: { 
+		'Accept': 'application/json', 
+		'Content-Type': 'application/json' 
+		},
+	    body: strBody
+	}).then(function(res) {
+	    if (res.ok) {
+		return res.json();
+	    }
+	  })
+	.then(function(value) {
+		response = value;
+		console.log(response);
+	};
 	
 };
 //end testOrder
