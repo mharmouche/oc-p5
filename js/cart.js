@@ -90,6 +90,7 @@ function testOrder(){
 	  .then(function(value) {
 		let orderId = value.orderId;
 		console.log("orderId : " + orderId);
+		window.location.href = `./confirmation.html?orderId=${orderId}`;
 	  });
 
 	
