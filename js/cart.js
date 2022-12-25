@@ -104,7 +104,17 @@ function testOrder(){
 	content.contact.city = document.getElementById("city").value;
 	content.contact.email = document.getElementById("email").value;
 	content.products = []; 
+	//get product list
 	JSON.parse(localStorage.cart).kanap.forEach(k => content.products.push(k.id));
+	//remove duplication content.products
+	let arrAUX = [];
+	for (let k of content.products){
+		if(arrAUX.indexOf(k) === -1){
+                arrAUX.push(k);
+            } 
+	}
+	content.products = arrAUX;
+	
 	console.log(content.products);
 		
 	let strBody =  JSON.stringify(content);
