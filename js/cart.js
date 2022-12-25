@@ -105,6 +105,7 @@ function testOrder(){
 	content.contact.email = document.getElementById("email").value;
 	content.products = []; 
 	JSON.parse(localStorage.cart).kanap.forEach(k => content.products.push(k.id));
+	console.log(content.products);
 		
 	let strBody =  JSON.stringify(content);
 		
