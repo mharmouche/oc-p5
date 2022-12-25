@@ -91,6 +91,8 @@ function manipQuantity(){
 // test API post
 boutton = document.getElementById("order");
 boutton.addEventListener("click", testOrder);
+//interrupt form as in https://html.form.guide/snippets/html-submit-button-onclick-code/
+document.getElementsByClassName("cart__order__form").setAttribute("onsubmit", "return false");  
 
 function testOrder(){
 	//url + json body
