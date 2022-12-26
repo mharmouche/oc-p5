@@ -124,7 +124,7 @@ function testOrder(){
 	//url + json body
 	let url = "https://azure-brainy-echidna.glitch.me/api/products/order/";
 	//exit testOrder() if test not OK
-	if (!verifForm()) { Alert("Formulaire Incorrect!");return false;}
+	if (!verifForm()) { alert("Formulaire Incorrect!");return false;}
 
 	let content = {};content.contact = {};
 	//Get  data from form and localStorage
