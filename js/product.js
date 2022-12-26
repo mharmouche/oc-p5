@@ -43,6 +43,7 @@ function addToCart(){
 		item.name = name;
 		item.color = color;
 		item.quantity = parseInt(quantity);// we can not buy a part of item
+		document.getElementById('quantity').value = item.quantity;
 		item.price = price;
 		item.imageUrl = imageUrl;
 		item.altTxt = altTxt;
@@ -59,7 +60,7 @@ function addToCart(){
 		
 		localStorage.setItem('cart', JSON.stringify(cart));
 
-		alert("Ajouter à votre panier!");
+		alert(`Ajout à votre panier!\n ${item.quantity} canapé(s) de type ${item.name}`);
 	}	
 }
 
