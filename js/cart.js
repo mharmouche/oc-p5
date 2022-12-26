@@ -88,11 +88,37 @@ function manipQuantity(){
 	});
 }
 //End manipumation 
+
 // test API post
 boutton = document.getElementById("order");
 boutton.addEventListener("click", testOrder);
 //interrupt form as in https://html.form.guide/snippets/html-submit-button-onclick-code/
 document.getElementsByClassName("cart__order__form")[0].setAttribute("onSubmit", "return false");  
+//verifForm to check if all information are given properly
+function verifForm(){
+	let firstName = document.getElementById("firstName").value;
+	let lastName = document.getElementById("lastName").value;
+	let address = document.getElementById("address").value;
+	let city = document.getElementById("city").value;
+	let email = document.getElementById("email").value;
+	
+	regName = /^[A-Za-z]/;
+	regAddress = /^[A-Za-z0-9 ]/;
+	regCity = /^[A-Za-z ]/;
+	regEmail = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;;
+	
+	let result = true;
+	result &= firstName.match(regName);
+	result &= lastName.match(regName);
+	result &= address.match(regAddress);
+	result &= city.match(regCity);
+	result &= email.match(regEmail);
+	
+	console.log('Validation = ' + result);
+	return result;
+}
+
+//End verifForm()
 
 function testOrder(){
 	//url + json body
