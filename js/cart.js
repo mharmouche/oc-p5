@@ -96,11 +96,11 @@ boutton.addEventListener("click", testOrder);
 document.getElementsByClassName("cart__order__form")[0].setAttribute("onSubmit", "return false");  
 //verifForm to check if all information are given properly
 function verifForm(){
-	let firstName = document.getElementById("firstName").value;
-	let lastName = document.getElementById("lastName").value;
-	let address = document.getElementById("address").value;
-	let city = document.getElementById("city").value;
-	let email = document.getElementById("email").value;
+	let firstName = document.getElementById("firstName").value != null;;
+	let lastName = document.getElementById("lastName").value != null;;
+	let address = document.getElementById("address").value != null;;
+	let city = document.getElementById("city").value != null;;
+	let email = document.getElementById("email").value != null;;
 	
 	regName = /^[A-Za-z]/;
 	regAddress = /^[A-Za-z0-9 ]/;
@@ -123,6 +123,8 @@ function verifForm(){
 function testOrder(){
 	//url + json body
 	let url = "https://azure-brainy-echidna.glitch.me/api/products/order/";
+	//exit testOrder() if test not OK
+	if (!verifForm()) { Alert("Formulaire Incorrect!");return false;}
 
 	let content = {};content.contact = {};
 	//Get  data from form and localStorage
