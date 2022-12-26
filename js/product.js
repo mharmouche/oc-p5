@@ -42,7 +42,7 @@ function addToCart(){
 		item.id = id;
 		item.name = name;
 		item.color = color;
-		item.quantity = quantity;
+		item.quantity = parseInt(quantity);// we can not buy a part of item
 		item.price = price;
 		item.imageUrl = imageUrl;
 		item.altTxt = altTxt;
