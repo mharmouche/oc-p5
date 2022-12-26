@@ -96,11 +96,11 @@ boutton.addEventListener("click", testOrder);
 document.getElementsByClassName("cart__order__form")[0].setAttribute("onSubmit", "return false");  
 //verifForm to check if all information are given properly
 function verifForm(){
-	let firstName = document.getElementById("firstName").value != null;;
-	let lastName = document.getElementById("lastName").value != null;;
-	let address = document.getElementById("address").value != null;;
-	let city = document.getElementById("city").value != null;;
-	let email = document.getElementById("email").value != null;;
+	let firstName = document.getElementById("firstName").value;
+	let lastName = document.getElementById("lastName").value;
+	let address = document.getElementById("address").value;
+	let city = document.getElementById("city").value;
+	let email = document.getElementById("email").value;
 	
 	regName = /^[A-Za-z]/;
 	regAddress = /^[A-Za-z0-9 ]/;
@@ -108,11 +108,11 @@ function verifForm(){
 	regEmail = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;;
 	
 	let result = true;
-	result &= firstName.match(regName);
-	result &= lastName.match(regName);
-	result &= address.match(regAddress);
-	result &= city.match(regCity);
-	result &= email.match(regEmail);
+	result &= firstName.match(regName) != null;
+	result &= lastName.match(regName) != null;
+	result &= address.match(regAddress) != null;;
+	result &= city.match(regCity) != null;;
+	result &= email.match(regEmail) != null;;
 	
 	console.log('Validation = ' + result);
 	return result;
