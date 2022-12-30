@@ -132,7 +132,7 @@ function testOrder(){
 	//url + json body
 	let url = "https://azure-brainy-echidna.glitch.me/api/products/order/";
 	//exit testOrder() if test not OK
-	if (verifForm() !=0) { alert("Formulaire Incorrect!");return false;}
+	//if (verifForm() !=0) { alert("Formulaire Incorrect!");return false;}
 	if (verifForm() == 1) { alert("pérnom Incorrect!");return false;}
 	if (verifForm() == 2) { alert("nom Incorrect!");return false;}
 	if (verifForm() == 3) { alert("addresse Incorrect!");return false;}
