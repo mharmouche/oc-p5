@@ -107,12 +107,20 @@ function verifForm(){
 	regCity = /^[A-Za-z ]/;
 	regEmail = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;;
 	
-	let result = true;
+	let result = 0;
 	result &= firstName.match(regName) != null;
+	if (firstName.match(regName) == null){return 1}
 	result &= lastName.match(regName) != null;
+	if (lastName.match(regName) == null){return 2}
+	
 	result &= address.match(regAddress) != null;;
+	if (address.match(regAddress) == null){return 3}
+	
 	result &= city.match(regCity) != null;;
+	if (city.match(regCity) == null){return 4}
+	
 	result &= email.match(regEmail) != null;;
+	if (email.match(regEmail) == null){return 5}
 	
 	console.log('Validation = ' + result);
 	return result;
@@ -124,7 +132,13 @@ function testOrder(){
 	//url + json body
 	let url = "https://azure-brainy-echidna.glitch.me/api/products/order/";
 	//exit testOrder() if test not OK
-	if (!verifForm()) { alert("Formulaire Incorrect!");return false;}
+	if (verifForm() !=0) { alert("Formulaire Incorrect!");return false;}
+	if (verifForm() == 1) { alert("pérnom Incorrect!");return false;}
+	if (verifForm() == 2) { alert("nom Incorrect!");return false;}
+	if (verifForm() == 3) { alert("addresse Incorrect!");return false;}
+	if (verifForm() == 4) { alert("ville Incorrect!");return false;}
+	if (verifForm() == 5) { alert("Email Incorrect!");return false;}
+	
 
 	let content = {};content.contact = {};
 	//Get  data from form and localStorage
