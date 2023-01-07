@@ -102,7 +102,7 @@ function verifForm(){
 	let city = document.getElementById("city").value;
 	let email = document.getElementById("email").value;
 	
-	regName = /^[A-Za-z];
+	regName = /^[A-Za-z]/;
 	regAddress = /^[A-Za-z0-9 ]/;
 	regCity = /^[A-Za-z ]/;
 	regEmail = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;;
