@@ -20,6 +20,7 @@ function init0(){
 }
 // End of file
 init0();
+GetPrices(); //price & altTXT
 // GetPrice : recuperation des prix et description 
 function GetPrices(){
 	//copie de la cart actuelle en gCart
@@ -248,8 +249,8 @@ cart = JSON.parse(localStorage.cart);
 total = 0;
 document.getElementById('cart__items').innerHTML = '';
 
-for (k of cart.kanap){
-
+//for (k of cart.kanap){
+for (k of gCart.kanap){
 	total += k.price * k.quantity;
 	document.getElementById('cart__items').innerHTML+= `
               <article class="cart__item" data-id="${k.id}" data-color="${k.color}">
