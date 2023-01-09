@@ -227,10 +227,10 @@ for (k of cart.kanap){
 	//console.log(total);
 
 }
-document.getElementById('totalPrice').innerHTML = total;
-document.getElementById('totalQuantity').innerHTML = totalQuantity;
+//document.getElementById('totalPrice').innerHTML = total;
+//document.getElementById('totalQuantity').innerHTML = totalQuantity;
 
 
-
+refreshTotal();
 initSupprimer();
 manipQuantity();
