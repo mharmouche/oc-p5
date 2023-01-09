@@ -24,7 +24,7 @@ function GetPrice(id){
 	//copie de la cart actuelle en gCart
   	let gcart = JSON.parse(localStorage.cart);
 	//ajout des prix et description
-	id = gcart.kanap[1].id;
+	//id = gcart.kanap[1].id;
 	url =  baseURL + "/api/products/"+id;
 	console.log("url : ", url);
 	fetch(url)
