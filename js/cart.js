@@ -36,6 +36,15 @@ function GetPrices(){
 		//response = value;
 		console.log("value : ", value);
 		// boucle for à completer
+		for (let i in value){
+			//console.log(i);
+			let id = value[i]._id;
+			//let imageUrl = value[i].imageUrl;
+			//let description = value[i].description;
+			let altTxt = value[i].altTxt;
+			let price = value[i].price;
+			console.log(id , price);
+		}
 	
 	  })
 	  .catch(function(err) {
