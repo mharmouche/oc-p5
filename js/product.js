@@ -58,7 +58,7 @@ function addToCart(){
 		}else{//exists
 			//test total < 100
 			let newTotal = String (parseInt(cart.kanap[index].quantity) + parseInt(item.quantity));
-			if (newTotal > 100) {alerte("le total est > 100, déjà dans votre pannier " + cart.kanap[index].quantity + "items");}
+			if (newTotal > 100) {alert("le total est > 100, déjà dans votre pannier " + cart.kanap[index].quantity + "items");}
 			else {cart.kanap[index].quantity = newTotal;}
 			//cart.kanap[index].quantity = String (parseInt(cart.kanap[index].quantity) + parseInt(item.quantity));
 		}
