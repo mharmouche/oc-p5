@@ -43,7 +43,15 @@ function GetPrices(){
 			//let description = value[i].description;
 			let altTxt = value[i].altTxt;
 			let price = value[i].price;
-			console.log(id , price);
+			//console.log(id , price);
+			//find id
+			let index = gCart.kanap.findIndex(k => (k.id === id) );
+			if (index !== -1){//exists
+				gCart.kanap[index].price = price;
+				gCart.kanap[index].altTxt = altTxt;	
+			}
+			console.log("gCart : ", gCart);
+			
 		}
 	
 	  })
