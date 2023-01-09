@@ -52,7 +52,7 @@ function refreshTotal(){
 	cart = JSON.parse(localStorage.cart);
 	for (k of cart.kanap){
 		total += k.price * k.quantity;
-		totalQuantity += k.quantity;
+		totalQuantity += parseInt(k.quantity);
 	}
 	localStorage.setItem('cart', JSON.stringify(cart));
 	document.getElementById('totalPrice').innerHTML = total;
@@ -228,6 +228,7 @@ for (k of cart.kanap){
 
 }
 document.getElementById('totalPrice').innerHTML = total;
+document.getElementById('totalQuantity').innerHTML = totalQuantity;
 
 
 
