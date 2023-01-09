@@ -45,9 +45,9 @@ function addToCart(){
 		item.quantity = parseInt(quantity);// we can not buy a part of item
 		item.quantity = (item.quantity>100)?100:item.quantity;//quantity not grater than 100
 		document.getElementById('quantity').value = item.quantity;
-		item.price = price;
+		//item.price = price;
 		item.imageUrl = imageUrl;
-		item.altTxt = altTxt;
+		//item.altTxt = altTxt;
 
 		let cart = JSON.parse(localStorage.cart);
 		
