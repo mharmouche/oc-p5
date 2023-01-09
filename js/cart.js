@@ -26,7 +26,7 @@ function GetPrice(id){
 	//ajout des prix et description
 	id = gcart.kanap[1].id;
 	url =  baseURL + "/api/products/"+id;
-	console/log("url : ", url);
+	console.log("url : ", url);
 	fetch(url)
 	  .then(function(res) {
 	    if (res.ok) {
