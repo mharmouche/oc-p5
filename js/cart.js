@@ -19,6 +19,7 @@ function init0(){
 	gCart = JSON.parse(localStorage.cart);
 }
 // End of file
+init0();
 // GetPrice : recuperation des prix et description 
 function GetPrices(){
 	//copie de la cart actuelle en gCart
@@ -60,10 +61,6 @@ function GetPrices(){
 
 		console.log(err);
 	  });
-	
-	
-	
-	
 	
 }
 // End of file
