@@ -1,3 +1,9 @@
+//global variable 
+gCart = {};
+//host of API
+baseURL = "https://azure-brainy-echidna.glitch.me";
+
+
 // initialisation : init localStorage
 function init0(){
   let cart0 = '{"orderId":"","total":0,"kanap":[]}';
@@ -10,8 +16,43 @@ function init0(){
   if (cart.kanap.length ==0){
     localStorage.setItem( 'cart', cart0);
   }
+	gCart = JSON.parse(localStorage.cart);
 }
 // End of file
+// GetPrice : recuperation des prix et description 
+function GetPrice(id){
+	//copie de la cart actuelle en gCart
+  	let gcart = JSON.parse(localStorage.cart);
+	//ajout des prix et description
+	id = gcart.kanap[1].id;
+	url =  baseURL + "/api/products/"+id;
+	fetch(url)
+	  .then(function(res) {
+	    if (res.ok) {
+		return res.json();
+	    }
+	  })
+	.then(function(value) {
+		//response = value;
+		let ret = {}:
+		let ret.price = value.price;
+		let ret.altTxt = value.price;
+		return ret;
+	
+	  })
+	  .catch(function(err) {
+	    // Une erreur est survenue
+
+		console.log(err);
+	  });
+	
+	
+	
+	
+	
+}
+// End of file
+
 
 //initSupprimer() to be executer after html DOM construction
 function initSupprimer(){
