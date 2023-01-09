@@ -20,12 +20,11 @@ function init0(){
 }
 // End of file
 // GetPrice : recuperation des prix et description 
-function GetPrice(id){
+function GetPrices(){
 	//copie de la cart actuelle en gCart
   	let gcart = JSON.parse(localStorage.cart);
 	//ajout des prix et description
-	//id = gcart.kanap[1].id;
-	url =  baseURL + "/api/products/"+id;
+	url =  baseURL + "/api/products/";
 	console.log("url : ", url);
 	fetch(url)
 	  .then(function(res) {
@@ -36,11 +35,7 @@ function GetPrice(id){
 	.then(function(value) {
 		//response = value;
 		console.log("value : ", value);
-		let ret = {};
-		ret.price = value.price;
-		ret.altTxt = value.price;
-		console.log('ret : ' + JSON.stringify(ret) );
-		return ret;
+		// boucle for à completer
 	
 	  })
 	  .catch(function(err) {
