@@ -23,7 +23,7 @@ init0();
 // GetPrice : recuperation des prix et description 
 function GetPrices(){
 	//copie de la cart actuelle en gCart
-  	let gcart = JSON.parse(localStorage.cart);
+  	gCart = JSON.parse(localStorage.cart);
 	//ajout des prix et description
 	url =  baseURL + "/api/products/";
 	console.log("url : ", url);
