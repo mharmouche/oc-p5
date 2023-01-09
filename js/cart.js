@@ -252,12 +252,13 @@ cart = JSON.parse(localStorage.cart);
 
 function updatePage(){
 	document.getElementById('cart__items').innerHTML = '';
-	GetPrices();
 	total = 0;
+	
+	GetPrices();
 	//for (k of cart.kanap){
 	for (k of gCart.kanap){
 		total += k.price * k.quantity;
-		console.log('prix', k.price);
+		console.log("prix" + k.price);
 
 		document.getElementById('cart__items').innerHTML+= `
 		      <article class="cart__item" data-id="${k.id}" data-color="${k.color}">
