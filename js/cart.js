@@ -282,6 +282,7 @@ function updatePage(){
 
 
 		//console.log(total);
+		console.log('prix', k.price);
 
 	}
 
