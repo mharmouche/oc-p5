@@ -250,6 +250,7 @@ cart = JSON.parse(localStorage.cart);
 
 total = 0;
 document.getElementById('cart__items').innerHTML = '';
+GetPrices();
 
 //for (k of cart.kanap){
 for (k of gCart.kanap){
