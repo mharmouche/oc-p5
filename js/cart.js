@@ -34,7 +34,7 @@ function GetPrice(id){
 	  })
 	.then(function(value) {
 		//response = value;
-		let ret = {}:
+		let ret = {};
 		let ret.price = value.price;
 		let ret.altTxt = value.price;
 		return ret;
