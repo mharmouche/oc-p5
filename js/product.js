@@ -43,6 +43,7 @@ function addToCart(){
 		item.name = name;
 		item.color = color;
 		item.quantity = parseInt(quantity);// we can not buy a part of item
+		item.quantity = (item.quantity>100)?100:item.quantity;//quantity not grater than 100
 		document.getElementById('quantity').value = item.quantity;
 		item.price = price;
 		item.imageUrl = imageUrl;
@@ -55,7 +56,11 @@ function addToCart(){
 		if (index === -1){//new
 			cart.kanap.push(item);
 		}else{//exists
-			cart.kanap[index].quantity = String (parseInt(cart.kanap[index].quantity) + parseInt(item.quantity));
+			//test total < 100
+			let newTotal = String (parseInt(cart.kanap[index].quantity) + parseInt(item.quantity));
+			if (newTotal > 100) {alerte("le total est > 100, déjà dans votre pannier " + cart.kanap[index].quantity + "items");}
+			else {cart.kanap[index].quantity = newTotal;}
+			//cart.kanap[index].quantity = String (parseInt(cart.kanap[index].quantity) + parseInt(item.quantity));
 		}
 		
 		localStorage.setItem('cart', JSON.stringify(cart));
