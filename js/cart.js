@@ -48,12 +48,15 @@ function initSupprimer(){
 //initSupprimer()  for test event
 function refreshTotal(){
 	total = 0;
+	totalQuantity = 0;
 	cart = JSON.parse(localStorage.cart);
 	for (k of cart.kanap){
 		total += k.price * k.quantity;
+		totalQuantity += k.quantity;
 	}
 	localStorage.setItem('cart', JSON.stringify(cart));
 	document.getElementById('totalPrice').innerHTML = total;
+	document.getElementById('totalQuantity').innerHTML = totalQuantity;
 };
 
 // manipulation quantity
