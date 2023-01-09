@@ -50,7 +50,9 @@ function GetPrices(){
 			let index = gCart.kanap.findIndex(k => (k.id === id) );
 			if (index !== -1){//exists
 				gCart.kanap[index].price = price;
-				gCart.kanap[index].altTxt = altTxt;	
+				gCart.kanap[index].altTxt = altTxt;
+				//troubleshoot
+				console.log(id , price);
 			}
 			//console.log("gCart : ", gCart);
 			
