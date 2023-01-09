@@ -106,7 +106,7 @@ function refreshTotal(){
 	cart = JSON.parse(localStorage.cart);
 	GetPrices();
 	//for (k of cart.kanap){
-	for (k of gCart){
+	for (k of gCart.kanap){
 		total += k.price * k.quantity;
 		totalQuantity += parseInt(k.quantity);
 	}
