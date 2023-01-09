@@ -248,46 +248,48 @@ function testOrder(){
 //end testOrder
 cart = JSON.parse(localStorage.cart);
 
-total = 0;
-document.getElementById('cart__items').innerHTML = '';
-GetPrices();
+function updatePage(){
+	document.getElementById('cart__items').innerHTML = '';
+	GetPrices();
+	total = 0;
+	//for (k of cart.kanap){
+	for (k of gCart.kanap){
+		total += k.price * k.quantity;
+		document.getElementById('cart__items').innerHTML+= `
+		      <article class="cart__item" data-id="${k.id}" data-color="${k.color}">
+			<div class="cart__item__img">
+			  <img src="${k.imageUrl}" alt="${k.altTxt}">
+			</div>
+			<div class="cart__item__content">
+			  <div class="cart__item__content__description">
+			    <h2>${k.name}</h2>
+			    <p>${k.color}</p>
+			    <p>${k.price} €</p>
+			  </div>
+			  <div class="cart__item__content__settings">
+			    <div class="cart__item__content__settings__quantity">
+			      <p>Qté : </p>
+			      <input type="number" class="itemQuantity" name="itemQuantity" min="1" max="100" value=${k.quantity}>
+			    </div>
+			    <div class="cart__item__content__settings__delete">
+			      <p class="deleteItem">Supprimer</p>
+			    </div>
+			  </div>
+			</div>
+		      </article>
 
-//for (k of cart.kanap){
-for (k of gCart.kanap){
-	total += k.price * k.quantity;
-	document.getElementById('cart__items').innerHTML+= `
-              <article class="cart__item" data-id="${k.id}" data-color="${k.color}">
-                <div class="cart__item__img">
-                  <img src="${k.imageUrl}" alt="${k.altTxt}">
-                </div>
-                <div class="cart__item__content">
-                  <div class="cart__item__content__description">
-                    <h2>${k.name}</h2>
-                    <p>${k.color}</p>
-                    <p>${k.price} €</p>
-                  </div>
-                  <div class="cart__item__content__settings">
-                    <div class="cart__item__content__settings__quantity">
-                      <p>Qté : </p>
-                      <input type="number" class="itemQuantity" name="itemQuantity" min="1" max="100" value=${k.quantity}>
-                    </div>
-                    <div class="cart__item__content__settings__delete">
-                      <p class="deleteItem">Supprimer</p>
-                    </div>
-                  </div>
-                </div>
-              </article>
+		`;
 
-	`;
 
-   
-	//console.log(total);
+		//console.log(total);
+
+	}
 
 }
 //document.getElementById('totalPrice').innerHTML = total;
 //document.getElementById('totalQuantity').innerHTML = totalQuantity;
 
-
+updatePage();
 refreshTotal();
 initSupprimer();
 manipQuantity();
