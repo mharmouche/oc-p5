@@ -39,7 +39,7 @@ function GetPrice(id){
 		let ret = {};
 		ret.price = value.price;
 		ret.altTxt = value.price;
-		console.log('ret : ' + ret);
+		console.log('ret : ' + JSON.stringify(ret) );
 		return ret;
 	
 	  })
