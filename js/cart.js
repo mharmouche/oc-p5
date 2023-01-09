@@ -52,7 +52,7 @@ function GetPrices(){
 				gCart.kanap[index].price = price;
 				gCart.kanap[index].altTxt = altTxt;	
 			}
-			console.log("gCart : ", gCart);
+			//console.log("gCart : ", gCart);
 			
 		}
 	
@@ -255,6 +255,8 @@ function updatePage(){
 	//for (k of cart.kanap){
 	for (k of gCart.kanap){
 		total += k.price * k.quantity;
+		console.log('prix', k.price);
+
 		document.getElementById('cart__items').innerHTML+= `
 		      <article class="cart__item" data-id="${k.id}" data-color="${k.color}">
 			<div class="cart__item__img">
@@ -282,7 +284,6 @@ function updatePage(){
 
 
 		//console.log(total);
-		console.log('prix', k.price);
 
 	}
 
