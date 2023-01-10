@@ -295,7 +295,9 @@ function updatePage(){
 //document.getElementById('totalPrice').innerHTML = total;
 //document.getElementById('totalQuantity').innerHTML = totalQuantity;
 
-updatePage();
 refreshTotal();
 initSupprimer();
 manipQuantity();
+
+updatePage();
+
