@@ -81,7 +81,7 @@ function initSupprimer(){
 	const deleteItems = document.querySelectorAll('.deleteItem');
 	deleteItems.forEach(deleteItem => {
 		deleteItem.addEventListener('click', function handleClick(event) {
-			//console.log('box clicked', event);
+			console.log('box clicked', event);
 			//deleteItem.setAttribute('style', 'background-color: yellow;');
 			//deleteItem.parentNode.setAttribute('style', 'background-color: orange;');
 			//deleteItem.parentNode.parentNode.setAttribute('style', 'background-color: green;');
