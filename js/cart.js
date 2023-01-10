@@ -39,7 +39,7 @@ async function GetPrices(){
 		return res.json();
 	    }
 	  })
-	.then(function(value) */{
+	.then(function(value) { */
 		//response = value;
 		console.log("value : ", value);
 		// boucle for à completer
