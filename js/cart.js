@@ -68,6 +68,9 @@ async function GetPrices(){
 		console.log("3");
 		updatePage();
 		console.log("4");
+		console.log("total : ", total);
+	
+	
 		document.getElementById('totalPrice').innerHTML = total;
 	
 	  //});
