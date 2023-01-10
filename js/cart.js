@@ -55,7 +55,7 @@ function GetPrices(){
 				console.log(id , price);
 			}
 			console.log("1");
-			updatePages();
+			updatePage();
 			console.log("2");
 			//console.log("gCart : ", gCart);
 			
