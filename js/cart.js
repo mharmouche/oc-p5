@@ -54,9 +54,13 @@ function GetPrices(){
 				//troubleshoot
 				console.log(id , price);
 			}
+			console.log("1");
+			updatePages();
+			console.log("2");
 			//console.log("gCart : ", gCart);
 			
 		}
+		console.log("3");
 	
 	  })
 	  .catch(function(err) {
