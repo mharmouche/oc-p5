@@ -298,5 +298,15 @@ function updatePage(){
 initSupprimer();
 manipQuantity();
 
+//refresh each 5 sec
+setInterval(function(){
+    initSupprimer()
+}, 5000)
+
+//refresh each 5 sec
+setInterval(function(){
+    manipQuantity()
+}, 5000)
+
 refreshTotal();
 updatePage();
