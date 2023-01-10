@@ -99,11 +99,12 @@ function initSupprimer(){
 			let color = nodeMap[2].value;
 		
 			// remove element from localstorage,  delete it visually, estimate total
+			console.log("start deletion");
 			let cart = JSON.parse(localStorage.cart);
 			cart.kanap = cart.kanap.filter(k => (k.id !== id) || (k.color !== color));
 			localStorage.setItem('cart', JSON.stringify(cart));
 			refreshTotal();
-			
+			console.log("end deletion");
 			deleteItem.parentNode.parentNode.parentNode.parentNode.remove() ;
 		});
 	});
