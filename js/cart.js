@@ -30,7 +30,7 @@ function GetPrices(){
 	console.log("url : ", url);
 	const response = await fetch(url);
 	const value = await response.json();
-	console.log(json);
+	console.log(value);
 
 	/*
 	fetch(url)
@@ -70,7 +70,7 @@ function GetPrices(){
 		console.log("4");
 		document.getElementById('totalPrice').innerHTML = total;
 	
-	  });
+	  //});
 	
 }
 // End of file
