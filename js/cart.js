@@ -258,7 +258,7 @@ function updatePage(){
 	document.getElementById('cart__items').innerHTML = '';
 	total = 0;
 	
-	GetPrices();
+	//GetPrices();
 	//for (k of cart.kanap){
 	for (k of gCart.kanap){
 		total += k.price * k.quantity;
