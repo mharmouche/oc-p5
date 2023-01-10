@@ -131,7 +131,7 @@ function manipQuantity(){
 
 	itemQuantitys.forEach(itemQuantity => {
 	    itemQuantity.addEventListener('change', (event) => {
-			//alert(`You like ${event.target.value}`);
+			alert(`You like ${event.target.value}`);
 			
 			
 			const nodeMap = itemQuantity.parentNode.parentNode.parentNode.parentNode.attributes;
