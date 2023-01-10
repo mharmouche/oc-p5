@@ -48,10 +48,7 @@ function GetPrices(){
 			//console.log(id , price);
 			//find id
 			let index = gCart.kanap.findIndex(k => (k.id === id) );
-			//if (index !== -1){//exists
-			while (index !== -1){//exists
-				//car plusieurs couleurs possibles
-				index = gCart.kanap.findIndex(k => (k.id === id) );
+			if (index !== -1){//exists
 				gCart.kanap[index].price = price;
 				gCart.kanap[index].altTxt = altTxt;
 				//troubleshoot
