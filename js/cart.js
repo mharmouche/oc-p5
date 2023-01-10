@@ -28,13 +28,18 @@ function GetPrices(){
 	//ajout des prix et description
 	url =  baseURL + "/api/products/";
 	console.log("url : ", url);
+	const response = await fetch(url);
+	const value = await response.json();
+	console.log(json);
+
+	/*
 	fetch(url)
 	  .then(function(res) {
 	    if (res.ok) {
 		return res.json();
 	    }
 	  })
-	.then(function(value) {
+	.then(function(value) */{
 		//response = value;
 		console.log("value : ", value);
 		// boucle for à completer
@@ -65,11 +70,6 @@ function GetPrices(){
 		console.log("4");
 		document.getElementById('totalPrice').innerHTML = total;
 	
-	  })
-	  .catch(function(err) {
-	    // Une erreur est survenue
-
-		console.log(err);
 	  });
 	
 }
