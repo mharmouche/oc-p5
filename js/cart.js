@@ -54,13 +54,16 @@ function GetPrices(){
 				//troubleshoot
 				console.log(id , price);
 			}
-			console.log("1");
-			updatePage();
-			console.log("2");
+			//console.log("1");
+			//updatePage();
+			//console.log("2");
 			//console.log("gCart : ", gCart);
 			
 		}
 		console.log("3");
+		updatePage();
+		console.log("4");
+		document.getElementById('totalPrice').innerHTML = total;
 	
 	  })
 	  .catch(function(err) {
