@@ -82,22 +82,12 @@ async function GetPrices(){
 //initSupprimer() to be executer after html DOM construction
 function initSupprimer(){
 	const deleteItems = document.querySelectorAll('.deleteItem');
-	deleteItems.forEach(deleteItem => {
-		deleteItem.addEventListener('click', function handleClick(event) {
+	deleteItems.forEach(vDeleteItem => {
+		vDeleteItem.addEventListener('click', function handleClick(event) {
 			console.log('box clicked', event);
-			//deleteItem.setAttribute('style', 'background-color: yellow;');
-			//deleteItem.parentNode.setAttribute('style', 'background-color: orange;');
-			//deleteItem.parentNode.parentNode.setAttribute('style', 'background-color: green;');
-			//deleteItem.parentNode.parentNode.parentNode.setAttribute('style', 'background-color: blue;');
-			//deleteItem.parentNode.parentNode.parentNode.parentNode.setAttribute('style', 'background-color: red;');
-			//deleteItem.parentNode.parentNode.parentNode.parentNode.parentNode.setAttribute('style', 'background-color: cyan;');
 			
-			const nodeMap = deleteItem.parentNode.parentNode.parentNode.parentNode.attributes;
-			//let text = "";
-			//for (let i = 0; i < nodeMap.length; i++) {
-			//  text += nodeMap[i].name + " = " + nodeMap[i].value + "<br>";
-			//}
-			//console.log(text);
+			const nodeMap = vDeleteItem.parentNode.parentNode.parentNode.parentNode.attributes;
+			
 			let id = nodeMap[1].value;
 			let color = nodeMap[2].value;
 		
@@ -108,7 +98,7 @@ function initSupprimer(){
 			localStorage.setItem('cart', JSON.stringify(cart));
 			refreshTotal();
 			console.log("end deletion");
-			deleteItem.parentNode.parentNode.parentNode.parentNode.remove() ;
+			vDeleteItem.parentNode.parentNode.parentNode.parentNode.remove() ;
 		});
 	});
 }
