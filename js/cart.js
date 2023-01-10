@@ -22,7 +22,7 @@ function init0(){
 init0();
 GetPrices(); //price & altTXT
 // GetPrice : recuperation des prix et description 
-function GetPrices(){
+async function GetPrices(){
 	//copie de la cart actuelle en gCart
   	gCart = JSON.parse(localStorage.cart);
 	//ajout des prix et description
