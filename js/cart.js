@@ -84,7 +84,7 @@ function initSupprimer(){
 	const deleteItems = document.querySelectorAll('.deleteItem');
 	deleteItems.forEach(vDeleteItem => {
 		vDeleteItem.addEventListener('click', function handleClick(event) {
-			console.log('box clicked', event);
+			//console.log('box clicked', event);
 			
 			const nodeMap = vDeleteItem.parentNode.parentNode.parentNode.parentNode.attributes;
 			
@@ -124,7 +124,7 @@ function manipQuantity(){
 
 	itemQuantitys.forEach(itemQuantity => {
 	    itemQuantity.addEventListener('change', (event) => {
-			alert(`You like ${event.target.value}`);
+			//alert(`You like ${event.target.value}`);
 			
 			
 			const nodeMap = itemQuantity.parentNode.parentNode.parentNode.parentNode.attributes;
@@ -298,15 +298,15 @@ function updatePage(){
 initSupprimer();
 manipQuantity();
 
-//refresh each 5 sec
+//refresh each 2 sec
 setInterval(function(){
     initSupprimer()
-}, 5000)
+}, 2000)
 
-//refresh each 5 sec
+//refresh each 2 sec
 setInterval(function(){
     manipQuantity()
-}, 5000)
+}, 2000)
 
 refreshTotal();
 updatePage();
