@@ -31,6 +31,21 @@ fetch(url)
   .then(function(value) {
 	response = value;
 	var innera = '';
+	
+	for (const kanap of response) {
+        console.log(kanap);
+        innera =
+          innera +
+            `<a href="./product.html?id=${kanap._id}">
+            <article>
+            <img src="${kanap.imageUrl}" alt="Lorem ipsum dolor sit amet, Kanap name1">
+            <h3 class="productName">${kanap.name}</h3>
+            <p class="productDescription">${kanap.description}
+            </article>
+            </a>`;
+        //console.log(html);
+	}
+	/*
 	for (let i in response){
 		//console.log(i);
 		let id = response[i]._id;
@@ -51,7 +66,7 @@ fetch(url)
 		a += '</article> \n </a>' + '\n';
 		console.log(a);
 		innera += a;
-	}
+	}*/
 
 
 	let items = document.getElementById('items');
