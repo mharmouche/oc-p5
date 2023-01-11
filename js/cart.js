@@ -41,7 +41,7 @@ async function GetPrices(){
 	  })
 	.then(function(value) { */
 		//response = value;
-		console.log("value : ", value);
+		//console.log("value : ", value);
 		// boucle for à completer
 		for (let i in value){
 			//console.log(i);
@@ -61,14 +61,14 @@ async function GetPrices(){
 					//troubleshoot
 					console.log(id , price);
 				}
-				console.log("color : ", color);
+				//console.log("color : ", color);
 			}
 			
 		}
-		console.log("3");
+		//console.log("3");
 		updatePage();
-		console.log("4");
-		console.log("total : ", total);
+		//console.log("4");
+		//console.log("total : ", total);
 	
 	
 		document.getElementById('totalPrice').innerHTML = total;
@@ -92,12 +92,12 @@ function initSupprimer(){
 			let color = nodeMap[2].value;
 		
 			// remove element from localstorage,  delete it visually, estimate total
-			console.log("start deletion");
+			//console.log("start deletion");
 			let cart = JSON.parse(localStorage.cart);
 			cart.kanap = cart.kanap.filter(k => (k.id !== id) || (k.color !== color));
 			localStorage.setItem('cart', JSON.stringify(cart));
 			refreshTotal();
-			console.log("end deletion");
+			//console.log("end deletion");
 			vDeleteItem.parentNode.parentNode.parentNode.parentNode.remove() ;
 		});
 	});
