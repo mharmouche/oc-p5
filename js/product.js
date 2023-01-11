@@ -97,6 +97,7 @@ fetch(url)
 	colors = response.colors;
 	options = document.getElementById('colors');
 	//optionsHTML = options.innerHTML  + '\n';
+	optionsHTML = options.innerHTML ;
 	for (color of colors)
 	{
 		//console.log(color);
