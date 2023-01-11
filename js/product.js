@@ -96,17 +96,19 @@ fetch(url)
 
 	colors = response.colors;
 	options = document.getElementById('colors');
-	optionsHTML = options.innerHTML  + '\n';
+	//optionsHTML = options.innerHTML  + '\n';
 	for (color of colors)
 	{
 		//console.log(color);
-		optionsHTML += '<option value="'+ color +'">'+ color +'</option>' + '\n';
+		//optionsHTML += '<option value="'+ color +'">'+ color +'</option>' + '\n';
+		optionsHTML +=`<option value="${color}">${color}</option>`;
 	}
 	options.innerHTML = optionsHTML ;
 
 
 	image = document.getElementsByClassName("item__img")[0];
-	image.innerHTML = '<img src="'+response.imageUrl+'"alt="'+response.altTxt +'">';
+	//image.innerHTML = '<img src="'+response.imageUrl+'"alt="'+response.altTxt +'">';
+	image.innerHTML = `<img src="${response.imageUrl}"alt="${response.altTxt}">`;
 
   })
   .catch(function(err) {
