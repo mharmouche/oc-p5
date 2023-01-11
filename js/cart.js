@@ -61,7 +61,7 @@ async function GetPrices(){
 					//troubleshoot
 					console.log(id , price);
 				}
-				console.log("color : " color);
+				console.log("color : ", color);
 			}
 			
 		}
