@@ -54,7 +54,7 @@ async function GetPrices(){
 			//find id
 			for (let color of value[i].colors)
 			{
-				let index = gCart.kanap.findIndex(k => (k.id === id) );// && (k.color === color)
+				let index = gCart.kanap.findIndex(k => (k.id === id) && (k.color === color) );// && (k.color === color)
 				if (index !== -1){//exists
 					gCart.kanap[index].price = price;
 					gCart.kanap[index].altTxt = altTxt;
